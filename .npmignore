@@ -1,0 +1,13 @@
+# Local configurations
+.github
+.vscode
+.editorconfig
+.eslintignore
+.gitattributes
+babel.config.js
+.eslintrc.json
+tsconfig.json
+
+# Not for production
+sources
+tests
