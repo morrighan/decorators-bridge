@@ -7,6 +7,7 @@
 babel.config.js
 .eslintrc.json
 tsconfig.json
+.mocharc.json
 
 # Not for production
 sources
