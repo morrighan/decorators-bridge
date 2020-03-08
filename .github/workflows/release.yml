@@ -36,3 +36,6 @@ jobs:
         npm test
       env:
         CI: true
+
+    - name: Publish the package
+      run: npm publish
