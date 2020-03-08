@@ -1,0 +1,65 @@
+{
+    "name": "@morrighan/decorators-bridge",
+    "version": "1.0.0",
+    "description": "The bridged interface for legacy and stage 2 decorators.",
+    "homepage": "https://github.com/morrighan/decorators-bridge",
+    "bugs": {
+        "url": "https://github.com/morrighan/decorators-bridge/issues"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Yongbin Min",
+        "email": "contact@cichol.com",
+        "url": "https://www.cichol.com/"
+    },
+    "main": "releases/index.js",
+    "directories": {
+        "lib": "releases",
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/morrighan/decorators-bridge.git"
+    },
+    "scripts": {
+        "build": "npx npm-run-all build:*",
+        "build:babel": "npx babel --root-mode upward sources --extensions .js,.ts --out-dir releases --source-maps inline --delete-dir-on-start",
+        "build:tsc": "npx tsc --project sources --outDir releases",
+        "test": "npx npm-run-all test:*",
+        "test:eslint": "npx eslint . --ext .js,.ts",
+        "test:tsc": "npx tsc --project . --noEmit",
+        "test:mocha": "npx mocha"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.8.7"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.7",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-proposal-decorators": "^7.8.3",
+        "@babel/plugin-transform-runtime": "^7.8.3",
+        "@babel/preset-env": "^7.8.7",
+        "@babel/preset-typescript": "^7.8.3",
+        "@babel/register": "^7.8.6",
+        "@morrighan/eslint-config": "^1.5.5",
+        "@types/chai": "^4.2.10",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^13.9.0",
+        "chai": "^4.2.0",
+        "eslint": "^6.8.0",
+        "mocha": "^7.1.0",
+        "npm-run-all": "^4.1.5",
+        "typescript": "^3.8.3"
+    },
+    "peerDependencies": {
+        "@babel/plugin-proposal-decorators": "^7.8.3"
+    },
+    "engines": {
+        "node": "^12.16.1",
+        "npm": "^6.14.2"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    }
+}

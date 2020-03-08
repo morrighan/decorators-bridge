@@ -1,0 +1,11 @@
+{
+    "root": true,
+    "extends": "@morrighan",
+    "parserOptions": {
+        "project": "tsconfig.json",
+        "tsconfigRootDir": "."
+    },
+    "rules": {
+        "camelcase": "off"
+    }
+}
